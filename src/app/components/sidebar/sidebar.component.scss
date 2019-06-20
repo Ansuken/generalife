@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+.logo-container {
+    min-height: 84px;
+    background: $main-color;
+    padding: 64px 0px;
+    h1{
+        margin: 0;
+    }
+    background-image: linear-gradient(to bottom right, rgba(167, 14, 166, 0.33), rgba(7, 15, 97, 0.5)), url('https://www.transparenttextures.com/patterns/noisy-net.png');
+}
+
+.menu-items {
+    padding: 30px 0px;
+    .menu-item {
+        width: 100%;
+        padding: 15px 30px;
+        i {
+            margin-right: 10px;
+        }
+
+        &.active, &:hover {
+            color: $tertiary-color;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+<div class="page-container">
+    <div class="page-title">
+        <h1>{{'MENU.GROUPS'|translate}}</h1>
+        <a class="btn btn-top-title btn-success" href="#" [routerLink]="['/groups/new']">{{'GROUPS.ADD_GROUP'|translate}}</a>
+    </div>
+    <div class="">
+        <!-- Page content -->
+        <div class="search-box">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-9">
+                    <p>{{'MISC.NAME'|translate}}</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="{{'MISC.SEARCH_BY_NAME'|translate}}" name="text" [(ngModel)]="searchGroups.text" (keyup)="findGroups()"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <p>{{'MISC.ENVIRONMENT'|translate}}</p>
+                    <select class="form-control datio-select" name="deleted" [(ngModel)]="searchGroups.environment" (change)="findGroups()">
+                        <option value="" selected>-</option>
+                        <option value="env1">Env 1</option>
+                        <option value="env-2">Env 2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="groups-box col-md-12" *ngIf="groups">
+            <div class="datio-table col-md-12 text-left">
+                <div class="table-header row">
+                    <div class="table-th col-md-2">{{'MISC.ENVIRONMENT'|translate}}</div>
+                    <div class="table-th col-md-3">{{'MISC.GROUP_NAME'|translate}}</div>
+                    <div class="table-th col-md-5">{{'MISC.GROUP_DESCRIPTION'|translate}}</div>
+                    <div class="table-th col-md-2"></div>
+                </div>
+                <div class="table-content">
+                    <ng-container *ngFor="let group of groups | orderby:['+idEnvironment']">
+                        <div class="row group-item pointer" *ngIf="!group['remove']" [routerLink]="['/groups', group['idGroup']]">
+                            <div class="table-td col-md-2">
+                                <span class="btn btn-datio btn-small btn-bagde" [ngStyle]="getEnvironmentColor(group['idEnvironment'])">
+                                    {{getEnvironmentName(group['idEnvironment'])}}
+                                </span>
+                            </div>
+                            <div class="table-td col-md-3">
+                                {{group['groupName']}}
+                            </div>
+                            
+                            <div class="table-td col-md-5">
+                                {{group['groupDescription']}}
+                            </div>
+                            <div class="table-td col-md-2 text-right">
+                                <span class="text-danger-datio pointer remove-icon" (click)="group['remove']=true">
+                                <i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="group['remove']">
+                            <div class="table-td col-md-10 text-right">
+                                {{'MISC.SURE_TO_REMOVE'|translate}}
+                            </div>
+                            <div class="table-td col-md-1 text-right">
+                                <span class="text-danger pointer" (click)="removeGroup(group['idGroup'])">
+                                    {{'MISC.YES'|translate}}
+                                </span>
+                            </div>
+                            <div class="table-td col-md-1 text-right">
+                                <span class="pointer" (click)="group['remove']=false">
+                                    {{'MISC.NO'|translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        

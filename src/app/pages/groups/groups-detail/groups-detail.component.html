@@ -1,0 +1,65 @@
+<div class="page-container" *ngIf="group">
+    <div class="main-info">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h1 class="text-tertiary-datio">{{group['groupName']}}</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">{{'MISC.GROUP_NAME'|translate}}</label>
+                            <input type="text" class="form-control" name="group.groupName" [(ngModel)]="group['groupName']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'MISC.GROUP_DESCRIPTION'|translate}}</label>
+                            <input type="text" class="form-control" name="group.groupDescription" [(ngModel)]="group['groupDescription']" required/>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">{{'MISC.ENVIRONMENT'|translate}}</label>
+                            <select class="form-control datio-select" name="group.idEnvironment" [(ngModel)]="group['idEnvironment']" required>
+                                <option value="" selected>-</option>
+                                <option [ngValue]="environment['idEnvironment']" *ngFor="let environment of environments">{{environment['environmentName']}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'MISC.PROJECT'|translate}}</label>
+                            <select class="form-control datio-select" name="project.idProject" [(ngModel)]="group['idProject']" required>
+                                <option value="" selected>-</option>
+                                <option [ngValue]="project['idProject']" *ngFor="let project of projects">{{project['name']}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <button class="btn btn-datio" (click)="goBack()">
+                            <i class="fas fa-chevron-left"></i> {{'MISC.GO_BACK'|translate}}
+                        </button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group text-right">
+                            <button class="btn btn-link text-danger" (click)="ngxSmartModalService.getModal('myModal').open()">{{'GROUPS.REMOVE_GROUP'|translate}}</button>
+                            <button class="btn btn-success" (click)="saveGroup()">{{'MISC.SAVE'|translate}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-smart-modal #myModal identifier="myModal" [closable]="false" [customClass]="'custom-modal'">
+    <div class="text-center">
+        <h1 class="text-danger-datio">{{'MISC.WARNING'|translate}}</h1>
+        <hr>
+        <h4>{{'GROUPS.WARNING_REMOVE_TEXT'|translate}}</h4>
+        <hr> 
+    </div>
+    <div class="row">
+            <div class="col-md-6 text-left">
+                <button class="btn btn-danger btn-large" (click)="myModal.close()">Nope</button>
+            </div>
+            <div class="col-md-6 text-right">
+                <button class="btn btn-success btn-large" (click)="removeGroup();myModal.close();">Do it!</button>
+            </div>
+        </div>
+</ngx-smart-modal>

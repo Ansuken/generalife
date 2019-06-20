@@ -1,0 +1,559 @@
+[ {
+    "id" : 1551,
+    "startDate" : "2016-11-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 1,
+      "uid" : "jdelallana",
+      "firstName" : "Jorge",
+      "lastName" : "de la Llana Zamora",
+      "email" : "jdelallana@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "MALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "51996572N",
+      "hireDate" : "2018-01-15",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1986-10-09",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 1995,
+    "startDate" : "2018-01-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 104,
+      "uid" : "ediez",
+      "firstName" : "Enrique",
+      "lastName" : "Díez García",
+      "email" : "ediez@datiobd.com",
+      "phoneNumber" : "",
+      "gender" : "MALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "53416111Z",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1983-01-01",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : "XE62795",
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 1996,
+    "startDate" : "2018-01-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 66,
+      "uid" : "rabderrahman",
+      "firstName" : "Ricardo",
+      "lastName" : "Abderrahman Cañabate",
+      "email" : "rabderrahman@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "MALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "03899222D",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1890-01-01",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 1997,
+    "startDate" : "2018-01-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 61,
+      "uid" : "mperez",
+      "firstName" : "Martin",
+      "lastName" : "Perez Brenlla",
+      "email" : "mperez@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "MALE",
+      "address" : null,
+      "profile" : "SCRUMMASTER",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "79333126P",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1890-01-01",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 1998,
+    "startDate" : "2018-01-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 71,
+      "uid" : "sdiez",
+      "firstName" : "Sara",
+      "lastName" : "Diez Castellanos",
+      "email" : "sdiez@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "FEMALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : true,
+      "nif" : "16570842D",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : "2018-06-28",
+      "leavingReason" : "Baja voluntaria",
+      "birthdate" : "1890-01-01",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 1999,
+    "startDate" : "2018-01-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 16,
+      "uid" : "youkhiar",
+      "firstName" : "Yassin",
+      "lastName" : "Oukhiar",
+      "email" : "youkhiar@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "MALE",
+      "address" : null,
+      "profile" : "SCRUMMASTER",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "X4716762Z",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1890-01-01",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 3052,
+        "name" : "Senior",
+        "cost" : 45.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 2000,
+    "startDate" : "2018-01-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 101,
+      "uid" : "jaserrano",
+      "firstName" : "Julio Alberto",
+      "lastName" : "Serrano Pinilla",
+      "email" : "jaserrano@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "MALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "11838495G",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1890-01-01",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 2385,
+    "startDate" : "2017-05-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 88,
+      "uid" : "aarguelles",
+      "firstName" : "Ana",
+      "lastName" : "Argüelles Fonseca",
+      "email" : "aarguelles@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "FEMALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "52617244Y",
+      "hireDate" : "1890-01-01",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1982-11-02",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : true,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 2395,
+    "startDate" : "2018-02-01",
+    "endDate" : null,
+    "rol" : "SM",
+    "user" : {
+      "id" : 1151,
+      "uid" : "mjrodriguez",
+      "firstName" : "Maria Jose",
+      "lastName" : "Rodriguez Gonzalez",
+      "email" : "mjrodriguez@datiobd.com",
+      "phoneNumber" : null,
+      "gender" : "FEMALE",
+      "address" : null,
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "50127450P",
+      "hireDate" : "2018-03-08",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1982-11-04",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : null,
+      "githubUser" : null,
+      "origin" : null,
+      "confidentialitySigned" : false,
+      "technologies" : null,
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : {
+        "id" : 1401,
+        "name" : "Arquitecto",
+        "cost" : 55.0
+      },
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1501,
+      "name" : "Agile",
+      "description" : "Equipos encargado de la metodología de trabajo",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1452,
+        "name" : "Plataforma",
+        "description" : "equipos de plataforma"
+      },
+      "imputationProject" : {
+        "id" : 1352,
+        "name" : "Daas",
+        "billable" : true,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  } ]

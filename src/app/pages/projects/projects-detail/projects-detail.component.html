@@ -1,0 +1,237 @@
+<div class="page-container" *ngIf="project">
+    <div class="main-info">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h1 class="text-tertiary-datio">{{project['name']}}</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.PROJECT_NAME'|translate}}</label>
+                            <input type="text" class="form-control" name="project.name" [(ngModel)]="project['name']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.PROJECT_DESCRIPTION'|translate}}</label>
+                            <input type="text" class="form-control" name="project.description" [(ngModel)]="project['description']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.PRODUCT_OWNER'|translate}}</label>
+                            <input type="text" class="form-control" name="project.po" [(ngModel)]="project['po']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.SANDBOX_OWNER'|translate}}</label>
+                            <input type="text" class="form-control" name="project.sandboxowner" [(ngModel)]="project['sandboxowner']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.COUNTRY'|translate}}</label>
+                            <select class="form-control datio-select" name="project.idCountry" [(ngModel)]="project['idCountry']" required>
+                                <option value="" selected>-</option>
+                                <option [ngValue]="country['idCountry']" *ngFor="let country of countries">{{country['name']}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'MISC.ENVIRONMENT'|translate}}</label>
+                            <select class="form-control datio-select" name="project.idEnvironment" [(ngModel)]="project['idEnvironment']" required>
+                                <option value="" selected>-</option>
+                                <option [ngValue]="environment['idEnvironment']" *ngFor="let environment of environments">{{environment['environmentName']}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.PARENT_PROJECT'|translate}}</label>
+                            <select class="form-control datio-select" name="project.idParentProject" [(ngModel)]="project['idParentProject']" required>
+                                <option value="" selected>-</option>
+                                <option [ngValue]="project['idProject']" *ngFor="let project of projects">{{project['name']}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.MAIN_UUAA'|translate}}</label>
+                            <input type="text" class="form-control" name="project.mainUUAA" [(ngModel)]="project['mainUUAA']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.RAW_UUAA'|translate}}</label>
+                            <input type="text" class="form-control" name="project.mainUUAA" [(ngModel)]="project['rawuuaa']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.JIRA'|translate}}</label>
+                            <input type="text" class="form-control" name="project.jira" [(ngModel)]="project['jira']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.CONFLUENCE'|translate}}</label>
+                            <input type="text" class="form-control" name="project.confluence" [(ngModel)]="project['confluence']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.DRIVE_URL'|translate}}</label>
+                            <input type="text" class="form-control" name="project.driveUrl" [(ngModel)]="project['driveUrl']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.BITBUCKET_URL'|translate}}</label>
+                            <input type="text" class="form-control" name="project.bitbucketUrl" [(ngModel)]="project['bitbucketUrl']" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">{{'PROJECTS.JENKINS_URL'|translate}}</label>
+                            <input type="text" class="form-control" name="project.jenkinsUrl" [(ngModel)]="project['jenkinsUrl']" required/>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <button class="btn btn-datio" (click)="goBack()">
+                            <i class="fas fa-chevron-left"></i> {{'MISC.GO_BACK'|translate}}
+                        </button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group text-right">
+                            <button class="btn btn-link text-danger" (click)="ngxSmartModalService.getModal('myModal').open()">{{'PROJECTS.REMOVE_PROJECT'|translate}}</button>
+                            <button class="btn btn-success" (click)="saveProject()">{{'MISC.SAVE'|translate}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-content user-header">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-box">
+                    <h4>{{'PROJECTS.SUBPROJECTS'|translate}}</h4>
+                    <div class="datio-table col-md-12 text-left">
+                        <div class="table-header row">
+                            <div class="table-th col-md-10">{{'PROJECTS.PROJECT_NAME'|translate}}</div>
+                            <div class="table-th col-md-2"></div>
+                        </div>
+                        <div class="table-content">
+                            <ng-container *ngFor="let subproject of project['subProjects'] | orderby:['+projectName']">
+                                <div class="row project-item pointer" *ngIf="!subproject['remove']" [routerLink]="['/projects', subproject['idProject']]">
+                                    <div class="table-td col-md-10">
+                                        {{subproject['name']}}
+                                    </div>
+                                    <div class="table-td col-md-2 text-right">
+                                        <span class="text-danger-datio pointer remove-icon" (click)="subproject['remove']=true"><i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}</span>
+                                    </div>
+                                </div>
+                                <div class="row" *ngIf="subproject['remove']">
+                                    <div class="table-td col-md-10 text-right">
+                                        {{'MISC.SURE_TO_REMOVE'|translate}} 
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="text-danger pointer" (click)="removeSubproject(subproject['idProject'])">{{'MISC.YES'|translate}}</span>
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="pointer" (click)="project['remove']=false">{{'MISC.NO'|translate}}</span>
+                                    </div>
+                                </div>
+                            </ng-container>
+                            <div class="table-td col-md-12 no-results" *ngIf="!project['subProjects'] || project['subProjects'].length===0">
+                                {{'PROJECTS.NO_PROJECTS_TO_SHOW'|translate}}
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-datio" *ngIf="!showSubprojectForm" (click)="addSubprojectToggle()">{{'PROJECTS.ADD_SUBPROJECT'|translate}}</button>
+                    <button class="btn btn-block btn-link text-danger-datio" *ngIf="showSubprojectForm" (click)="addSubprojectToggle()">{{'MISC.CANCEL'|translate}}</button>
+                    <div class="text-left project-item" *ngIf="showSubprojectForm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input 
+                                    class="form-control"
+                                    [value]="searchProject"
+                                    [taList]="projects"
+                                    [taListItemField]="fieldsToSearchProjects"
+                                    [taItemTpl]="projectTmpl"
+                                    ngxTypeahead
+                                    (taSelected)="handleProjectResultSelected($event)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-box">
+                    <h4>{{'MENU.USERS'|translate}}</h4>
+                    <div class="datio-table col-md-12 text-left">
+                        <div class="table-header row">
+                            <div class="table-th col-md-6">{{'PROJECTS.PROJECT_NAME'|translate}}</div>
+                            <div class="table-th col-md-2">{{'MISC.START_DATE'|translate}}</div>
+                            <div class="table-th col-md-2">{{'MISC.END_DATE'|translate}}</div>
+                            <div class="table-th col-md-2"></div>
+                        </div>
+                        <div class="table-content">
+                            <ng-container *ngFor="let user of project['users'] | orderby:['+firstName']">
+                                <div class="row project-item pointer" *ngIf="!user['remove']" [routerLink]="['/users', user['id']]">
+                                    <div class="table-td col-md-6">
+                                        {{user['firstName']}} {{user['lastName']}}
+                                    </div>
+                                    <div class="table-td col-md-2">
+                                        {{user['startDate']}}
+                                    </div>
+                                    <div class="table-td col-md-2">
+                                        {{user['endDate']}}
+                                    </div>
+                                    <div class="table-td col-md-2 text-right">
+                                        <span class="text-danger-datio pointer remove-icon" (click)="user['remove']=true"><i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}</span>
+                                    </div>
+                                </div>
+                                <div class="row" *ngIf="user['remove']">
+                                    <div class="table-td col-md-10 text-right">
+                                        {{'MISC.SURE_TO_REMOVE'|translate}} 
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="text-danger pointer" (click)="removeUser(user['idProject'])">{{'MISC.YES'|translate}}</span>
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="pointer" (click)="user['remove']=false">{{'MISC.NO'|translate}}</span>
+                                    </div>
+                                </div>
+                            </ng-container>
+                            <div class="table-td col-md-12 no-results" *ngIf="!project['users'] || project['users'].length===0">
+                                {{'USERS.NO_USERS_TO_SHOW'|translate}}
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-datio" *ngIf="!showUserForm" (click)="addUserToggle()">{{'USERS.ADD_USERS'|translate}}</button>
+                    <button class="btn btn-block btn-link text-danger-datio" *ngIf="showUserForm" (click)="addUserToggle()">{{'MISC.CANCEL'|translate}}</button>
+                    <div class="text-left project-item" *ngIf="showUserForm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input 
+                                    class="form-control"
+                                    [value]="searchUser"
+                                    [taList]="users"
+                                    [taListItemField]="fieldsToSearchUsers"
+                                    [taItemTpl]="userTmpl"
+                                    ngxTypeahead
+                                    (taSelected)="handleUserResultSelected($event)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-box">
+                    <h4>{{'MENU.GROUPS'|translate}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-smart-modal #myModal identifier="myModal" [closable]="false" [customClass]="'custom-modal'">
+    <div class="text-center">
+        <h1 class="text-danger-datio">{{'MISC.WARNING'|translate}}</h1>
+        <hr>
+        <h4>{{'PROJECTS.WARNING_REMOVE_TEXT'|translate}}</h4>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-left">
+            <button class="btn btn-danger btn-large" (click)="myModal.close()">{{'MISC.NOPE'|translate}}</button>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-success btn-large" (click)="myModal.close()">{{'MISC.DO_IT'|translate}}</button>
+        </div>
+    </div>
+</ngx-smart-modal>
+<ng-template #projectTmpl let-result>
+    <div class="pointer text-left">{{ result.result.name }}</div>
+</ng-template>
+<ng-template #userTmpl let-result>
+    <div class="pointer text-left">{{ result.result.firstName }} {{ result.result.lastName }}</div>
+</ng-template>

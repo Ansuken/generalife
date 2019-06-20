@@ -1,0 +1,227 @@
+<div class="page-container" *ngIf="user">
+    <div class="main-info" [ngClass]="{'deleted': user['deleted']}">
+        <div class="row">
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="user-detail-photo">
+                    <img width="100%" [src]="getPictureUrl()" />
+                </div>
+                <button class="btn btn-block btn-datio"><i class="fas fa-upload"></i> {{'USERS.CHANGE_PIC'|translate}}</button>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-9">
+                <h1 class="text-tertiary-datio">{{user['firstName']}} {{user['userName']}}</h1>
+                <h6 class="bg-danger-datio text-white p-1 text-center" *ngIf="user['deleted']">{{'MISC.DELETED'|translate}}</h6>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group" *ngIf="user.hasOwnProperty('userName')">
+                            <label class="control-label">{{'MISC.USER_NAME'|translate}}</label>
+                            <input type="text" class="form-control" name="user.uid" [(ngModel)]="user['userName']" required/>
+                        </div>
+                        <div class="form-group" *ngIf="user.hasOwnProperty('uid')">
+                            <label class="control-label">{{'USERS.UID'|translate}}</label>
+                            <input type="text" class="form-control" name="user.uid" [(ngModel)]="user['uid']" required/>
+                        </div>
+                        <div class="form-group" *ngIf="user.hasOwnProperty('email2')">
+                            <label class="control-label">{{'MISC.EMAIL'|translate}}</label>
+                            <input type="text" class="form-control" name="user.email2" [(ngModel)]="user['email2']" required/>
+                        </div>
+                        <div class="form-group" *ngIf="user.hasOwnProperty('emailBank')">
+                            <label class="control-label">{{'USERS.BBVA_EMAIL'|translate}}</label>
+                            <input type="text" class="form-control" name="user.emailBank" [(ngModel)]="user['emailBank']" required/>
+                        </div>
+                        <div class="form-group" *ngIf="user.hasOwnProperty('idCompany')">
+                            <label class="control-label">{{'MISC.COMPANY'|translate}}</label>
+                            <select class="form-control datio-select" name="user.idCompany" [(ngModel)]="user['idCompany']" required>
+                                <option value="" selected>-</option>
+                                <option [ngValue]="company['idCompany']" *ngFor="let company of companies | orderby:['+name']">{{company['name']}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group" *ngIf="user.hasOwnProperty('idBank')">
+                            <label class="control-label">{{'USERS.BANK_ID'|translate}}</label>
+                            <input type="text" class="form-control" name="user.idBank" [(ngModel)]="user['idBank']" required/>
+                        </div>
+                        <div class="form-group" *ngIf="user.hasOwnProperty('publicKey')">
+                            <label class="control-label">{{'USERS.PUBLIC_KEY'|translate}}</label>
+                            <input type="text" class="form-control" name="user.publicKey" [(ngModel)]="user['publicKey']" required/>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="form-group" *ngIf="user.hasOwnProperty('hdfs')">
+                                    <div class="custom-control custom-checkbox hdfs">
+                                        <input type="checkbox" class="custom-control-input" id="hdfs" name="hdfs" [checked]="user['hdfs']" [(ngModel)]="user['hdfs']">
+                                        <label class="custom-control-label" for="hdfs">{{'USERS.HDFS'|translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group" *ngIf="user.hasOwnProperty('ssh')">
+                                    <div class="custom-control custom-checkbox ssh">
+                                        <input type="checkbox" class="custom-control-input" id="ssh" name="ssh" [checked]="user['ssh']" [(ngModel)]="user['ssh']">
+                                        <label class="custom-control-label" for="ssh">{{'USERS.SSH'|translate}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="form-group" *ngIf="user.hasOwnProperty('vpn')">
+                                    <div class="custom-control custom-checkbox vpn">
+                                        <input type="checkbox" class="custom-control-input" id="vpn" name="vpn" [checked]="user['vpn']" [(ngModel)]="user['vpn']">
+                                        <label class="custom-control-label" for="vpn">{{'USERS.VPN'|translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group" *ngIf="user.hasOwnProperty('token')">
+                                    <div class="custom-control custom-checkbox token">
+                                        <input type="checkbox" class="custom-control-input" id="token" name="token" [checked]="user['token']" [(ngModel)]="user['token']">
+                                        <label class="custom-control-label" for="token">{{'USERS.TOKEN'|translate}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <button class="btn btn-datio" (click)="goBack()">
+                    <i class="fas fa-chevron-left"></i> {{'MISC.GO_BACK'|translate}}
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group text-right">
+                    <button class="btn btn-link text-danger" (click)="ngxSmartModalService.getModal('myModal').open()">{{'USERS.REMOVE_USER'|translate}}</button>
+                    <button class="btn btn-success">{{'MISC.SAVE'|translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-content user-header">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-box">
+                    <h4>{{'MISC.GROUPS'|translate}}</h4>
+                    <div class="datio-table col-md-12 text-left">
+                        <div class="table-header row">
+                            <div class="table-th col-md-3">{{'MISC.ENVIRONMENT'|translate}}</div>
+                            <div class="table-th col-md-7">{{'MISC.GROUP_NAME'|translate}}</div>
+                            <div class="table-th col-md-2"></div>
+                        </div>
+                        <div class="table-content">
+                            <ng-container *ngFor="let group of user['groupSet'] | orderby:['+idEnvironment']">
+                                <div class="row group-item pointer" *ngIf="!group['remove']" [routerLink]="['/groups', group['idGroup']]">
+                                    <div class="table-td col-md-3">
+                                        <span class="btn btn-datio btn-small btn-bagde" [ngStyle]="getEnvironmentColor(group['idEnvironment'])">
+                                            {{getEnvironmentName(group['idEnvironment'])}}
+                                        </span>
+                                    </div>
+                                    <div class="table-td col-md-7">
+                                        {{group['groupName']}}
+                                    </div>
+                                    <div class="table-td col-md-2 text-right">
+                                        <span class="text-danger-datio pointer remove-icon" (click)="group['remove']=true"><i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}</span>
+                                    </div>
+                                </div>
+                                <div class="row" *ngIf="group['remove']">
+                                    <div class="table-td col-md-10 text-right">
+                                        {{'MISC.SURE_TO_REMOVE'|translate}}
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="text-danger pointer" (click)="removeUserFromAGroup(group['idGroup'])">{{'MISC.YES'|translate}}</span>
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="pointer" (click)="group['remove']=false">{{'MISC.NO'|translate}}</span>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-datio" *ngIf="!showAddUserToAGroupForm" (click)="addUserToAGroupToggle()">{{'MISC.ADD_TO_A_GROUP'|translate}}</button>
+                    <button class="btn btn-block btn-link text-danger-datio" *ngIf="showAddUserToAGroupForm" (click)="addUserToAGroupToggle()">{{'MISC.CANCEL'|translate}}</button>
+                    <div class="text-left group-item" *ngIf="showAddUserToAGroupForm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input 
+                                    class="form-control"
+                                    [value]="searchGroups"
+                                    [taList]="groups"
+                                    [taListItemField]="fieldsToSearchGroups"
+                                    [taItemTpl]="itemTpl"
+                                    ngxTypeahead
+                                    (taSelected)="handleResultSelected($event)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-box">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <span class="pointer" (click)="cardBoxToggle()"><i class="fas fa-chevron-left fa-2x"></i></span>
+                        </div>
+                        <div class="col-md-8">
+                            <h4 *ngIf="cardBoxType==='projects'">{{'MISC.PROJECTS'|translate}}</h4>
+                            <h4 *ngIf="cardBoxType==='teams'">{{'MISC.TEAMS'|translate}}</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="pointer" (click)="cardBoxToggle()"><i class="fas fa-chevron-right fa-2x"></i></span>
+                        </div>
+                    </div>
+                    <div class="datio-table col-md-12 text-left">
+                        <div class="table-header row">
+                            <div class="table-th col-md-6">{{'MISC.NAME'|translate}}</div>
+                            <div class="table-th col-md-2">{{'MISC.START_DATE'|translate}}</div>
+                            <div class="table-th col-md-2">{{'MISC.END_DATE'|translate}}</div>
+                            <div class="table-th col-md-2"></div>
+                        </div>
+                        <div class="table-content">
+                            <ng-container *ngFor="let item of dataToShow | orderby:['+name']">
+                                <div class="row group-item pointer" *ngIf="!item['remove']" [routerLink]="['/projects', item['idProject']]">
+                                    <div class="table-td col-md-6">
+                                        {{item['name']}}
+                                    </div>
+                                    <div class="table-td col-md-2">
+                                        {{item['startdate']|date}}
+                                    </div>
+                                    <div class="table-td col-md-2">
+                                        {{item['enddate']|date}}
+                                    </div>
+                                    <div class="table-td col-md-2 text-right">
+                                        <span class="text-danger-datio pointer remove-icon" (click)="item['remove']=true"><i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}</span>
+                                    </div>
+                                </div>
+                                <div class="row" *ngIf="item['remove']">
+                                    <div class="table-td col-md-10 text-right">
+                                        {{'MISC.SURE_TO_REMOVE'|translate}}
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="text-danger pointer" (click)="removeUserFromAProject(item['idProject'])">{{'MISC.YES'|translate}}</span>
+                                    </div>
+                                    <div class="table-td col-md-1 text-right">
+                                        <span class="pointer" (click)="item['remove']=false">{{'MISC.NO'|translate}}</span>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-smart-modal #myModal identifier="myModal" [closable]="false" [customClass]="'custom-modal'">
+    <div class="text-center">
+        <h1 class="text-danger-datio">{{'MISC.WARNING'|translate}}</h1>
+        <hr>
+        <h4>{{'USERS.WARNING_REMOVE_TEXT'|translate}}</h4>
+        <hr> 
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-left">
+            <button class="btn btn-danger btn-large" (click)="myModal.close()">{{'MISC.NOPE'|translate}}</button>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-success btn-large" (click)="myModal.close()">{{'MISC.DO_IT'|translate}}</button>
+        </div>
+    </div>
+</ngx-smart-modal>
+<ng-template #itemTpl let-result>
+    <div class="pointer text-left">{{ result.result.groupName }}</div>
+</ng-template>

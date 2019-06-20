@@ -1,0 +1,135 @@
+/* BUTTONS */
+
+.btn {
+    //text-transform: uppercase;
+    padding: .375rem .75rem;
+    border-radius: 2px;
+}
+
+.btn-datio-inverted {
+    color: $tertiary-color;
+    background-color: transparent;
+    border-color: $tertiary-color;
+    border-radius: 0;
+    &:hover,
+    &:hover:enabled,
+    &:active,
+    &[disabled]:active {
+        color: $tertiary-color;
+        background: transparent;
+    }
+}
+
+.btn-small {
+    padding: 5px;
+    font-size: 13px;
+}
+
+.btn-large {
+    padding: 10px 45px;
+    height: 42px;
+}
+
+.btn-bagde {
+    padding: 0px;
+    min-width: 120px;
+    border-radius: 3px;
+}
+
+.btn-bagde-small {
+    
+    padding: 0px 10px;
+    border-radius: 3px;
+}
+
+.btn-badge-block {
+    min-width: 100%;
+}
+
+.btn-info {
+    background-color: $main-color;
+    border: none;
+    &:hover {
+        background-color: $main-color;
+    }
+}
+
+.btn-datio {
+    color: #fff;
+    background-color: $tertiary-color;
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $secondary-color;
+    }
+}
+
+.btn-datio-link {
+    padding: 0;
+    font-weight: 400;
+    color: $main-color;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.btn-datio-success {
+    color: #fff;
+    background-color: $datio-success;
+    padding: 5px 40px;
+    border-radius: 0;
+    &.btn-underline {
+        background-color: transparent;
+        color: $datio-success;
+        border-bottom: 3px solid $datio-success;
+    }
+    &:hover:not(.btn-underline),
+    &:focus:not(.btn-underline) {
+        color: #fff;
+        background-color: $datio-success-hover;
+    }
+}
+
+.btn-datio-warning {
+    color: #fff;
+    background-color: $datio-warning;
+    padding: 5px 40px;
+    border-radius: 0;
+    &.btn-underline {
+        background-color: transparent;
+        color: $datio-warning;
+        border-bottom: 3px solid $datio-warning;
+    }
+    &:hover:not(.btn-underline),
+    &:focus:not(.btn-underline) {
+        color: #fff;
+        background-color: $datio-warning-hover;
+    }
+}
+
+.btn-datio-danger {
+    color: #fff;
+    background-color: $datio-danger;
+    padding: 5px 40px;
+    border-radius: 0;
+    &.btn-underline {
+        background-color: transparent;
+        color: $datio-danger;
+        border-bottom: 3px solid $datio-danger;
+    }
+    &:hover:not(.btn-underline),
+    &:focus:not(.btn-underline) {
+        color: #fff;
+        background-color: $datio-danger-hover;
+    }
+}
+
+.btn:focus, .btn.focus {
+    box-shadow: none;
+}
+
+.btn-top-title {
+
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}

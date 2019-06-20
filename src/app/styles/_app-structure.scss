@@ -1,0 +1,132 @@
+/*APP Structure*/
+
+
+/* SUBMENU */
+
+.submenu {
+    //background: #FFF;
+}
+
+
+/* FIXED NAVBAR */
+
+body {
+    //padding-top: 64px;
+    /* Sidebar Menu */
+    //padding-top: 160px; /* Subheader */
+}
+
+*::selection {
+    background: #ff5423;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0px;
+    background: #FFF;
+}
+
+.subheader {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 64px;
+    background: #FFF;
+    border-bottom: 1px solid #ddd;
+}
+
+.app-title {
+    color: #fff;
+    float: left;
+    padding: 20px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 64px;
+    .app-title-text {
+        display: inline;
+        position: relative;
+        top: 6px;
+        font-weight: 300;
+        font-size: 20px;
+        padding-left: 5px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: #FFF;
+        text-decoration: none;
+    }
+}
+
+.app-container {
+    display: flex;
+    height: auto;
+    min-height: 100%;
+}
+
+.app {
+    padding: 30px;
+    background: $website-background-color;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    .card-box {
+        padding: 15px;
+        background: #fff;
+        border: 0px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+        margin-bottom: 30px;
+    }
+}
+
+.containerbar {
+    border-right: 1px solid #ddd;
+    background: $website-background-color;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+
+.sidebar {
+    position: relative;
+    height: auto;
+    background: #30323e;
+    max-width: 300px;
+    flex: 0 0 300px;
+}
+
+.sidebar-menu-content {
+    background: #fff;
+}
+
+.app {
+    background: $background-content;
+    margin-top: 114px;
+}
+
+.login-screen, .no-auth {
+    h1.logo {
+        color: #fff;
+        span {
+    
+        }
+    }
+}
+h1.logo {
+    color: #666;
+    span {
+
+    }
+}
+
+.separator {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}

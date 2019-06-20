@@ -1,0 +1,75 @@
+<div class="page-container">
+    <div class="page-title">
+        <h1>{{'MISC.PROJECTS'|translate}}</h1>
+        <a class="btn btn-top-title btn-success" href="#" [routerLink]="['/projects/new']">{{'PROJECTS.ADD_PROJECT'|translate}}</a>
+    </div>
+    <div class="">
+        <div class="search-box">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-9">
+                    <p>{{'MISC.NAME'|translate}}</p>
+                    <input type="text" class="form-control" placeholder="{{'MISC.SEARCH_BY_NAME'|translate}}" name="text" [(ngModel)]="searchProjects.text" (keyup)="findProjects()"/>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <p>{{'MISC.COUNTRIES'|translate}}</p>
+                    <select class="form-control datio-select" name="country" [(ngModel)]="searchProjects.country">
+                        <option value="" selected>-</option>
+                        <option [value]="country['idCountry']" *ngFor="let country of countries | orderby:['+name']">
+                            {{country['name']}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="projects-box col-md-12" *ngIf="projects">
+            <div class="datio-table col-md-12 text-left">
+                <div class="table-header row">
+                    <div class="table-th col-md-3">{{'PROJECTS.PROJECT_NAME'|translate}}</div>
+                    <div class="table-th col-md-2">{{'PROJECTS.COUNTRY'|translate}}</div>
+                    <div class="table-th col-md-3">{{'PROJECTS.PRODUCT_OWNER'|translate}}</div>
+                    <div class="table-th col-md-2">{{'PROJECTS.UUAA'|translate}}</div>
+                    <div class="table-th col-md-2"></div>
+                </div>
+                <div class="table-content">
+                    <ng-container *ngFor="let project of projects | searchfilter:['name']:searchProjects.text | searchfilter:['idCountry']:searchProjects.country | orderby:['+name']">
+                        <div class="row project-item pointer" *ngIf="!project['remove']" [routerLink]="['/projects', project['idProject']]">
+                            <div class="table-td col-md-3">
+                                {{project['name']}}
+                            </div>
+                            <div class="table-td col-md-2">
+                                {{getCountryName(project['idCountry'])}}
+                            </div>
+                            
+                            <div class="table-td col-md-3">
+                                {{project['po'] || getUserName(project['idProductOwner'])}}
+                            </div>
+                            <div class="table-td col-md-2">
+                                {{project['mainUUAA']}}
+                            </div>
+                            <div class="table-td col-md-2 text-right">
+                                <span class="text-danger-datio pointer remove-icon" (click)="project['remove']=true"><i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}</span>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="project['remove']">
+                            <div class="table-td col-md-10 text-right">
+                                {{'MISC.SURE_TO_REMOVE'|translate}}
+                            </div>
+                            <div class="table-td col-md-1 text-right">
+                                <span class="text-danger pointer" (click)="removeProject(project['idProject'])">{{'MISC.YES'|translate}}</span>
+                            </div>
+                            <div class="table-td col-md-1 text-right">
+                                <span class="pointer" (click)="project['remove']=false">{{'MISC.NO'|translate}}</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="row project-item" *ngIf="(projects | searchfilter:['name']:searchProjects.text | searchfilter:['idCountry']:searchProjects.country).length===0">
+                        <div class="table-td col-md-12 no-results">
+                            {{'PROJECTS.NO_PROJECTS_TO_SHOW'|translate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

@@ -1,0 +1,33 @@
+.users-box {
+    .user-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid $border-color;
+        transition: all 100ms;
+        .user-photo {
+            background-size: cover;
+            background-position-y: 50%;
+            height: 72px;
+            width: 72px;
+            //border-radius: 50%;
+            transition: all 100ms;
+        }
+        .user-info {
+            .company {
+            }
+            .email {
+
+            }
+        }
+
+        &:hover {
+            //border: 1px solid $main-color;
+            .user-photo {
+                border-radius: 50%;
+            }
+            @include mid-shadow;
+            transform: scale(1.01);
+        }
+    }
+}

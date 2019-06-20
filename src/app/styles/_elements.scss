@@ -1,0 +1,172 @@
+/* Own Styles*/
+
+
+/* PANELS */
+
+.panel-default>.panel-heading {
+    color: #FFF;
+    background-color: $main-color;
+}
+
+.subtitle {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 20px;
+}
+
+.panel-subtitle {
+    background-color: #DDD;
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+}
+
+.panel-subtitle-current {
+    background-color: #FFF;
+    color: $main-color;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* DROPDOWNS */
+
+.navbar-nav>li>.dropdown-menu {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu {
+    border: 0;
+}
+
+.dropdown-menu>li>a {
+    padding: 10px 20px;
+}
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    color: #FFF;
+    background-color: $main-color;
+}
+
+
+/* DIV TABLES */
+
+.datio-table {
+    font-size: $table-font-size;
+    &.xl {
+        font-size: $table-font-size-xl;
+    }
+    &.light {
+        color: #fff;
+    }
+    .table-header {
+        .table-th {
+            vertical-align: bottom;
+            padding: .75rem;
+            border-top: 1px solid #dee2e6;
+            font-weight: bold;
+        }
+    }
+    .table-content {
+        /*&>.row:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, .05);
+        }*/
+        .table-td {
+            padding: .75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+            word-wrap: break-word;
+        }
+    }
+}
+
+
+/*Table corrections*/
+
+.table thead th {
+    border-bottom: none;
+}
+
+
+/*PAGINATION FIXES*/
+
+.pagination-box {
+    padding-top: 15px;
+}
+
+/* MODALS */
+.custom-modal {
+    max-width: 1000px !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.modal {
+	padding: 0;
+}
+.console {
+	background: #000;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+	color: #FFF;
+	white-space: pre-wrap;
+	white-space: pre-line;
+	word-break: break-all;
+	max-height: 100%;
+	overflow: auto;
+	padding-bottom: 56px;
+}
+
+.modal-console {
+	max-width: none;
+	height: 100%;
+    overflow: hidden;
+	
+	.highlightArrow {
+
+		padding: 5px;
+    	cursor: pointer;
+	}
+}
+
+.modal-content-size-full {
+	max-width: 100%;
+	margin: 0;
+    height: 100%;
+	overflow: hidden;
+	background: #000;
+}
+
+.modal-footer {
+	border: none;
+    position: absolute;
+    bottom: 0px;
+    background: #fff;
+	width: 100%;
+    padding: 0 10px;
+    
+    .modal-footer-loading-content {
+        width: 100%;
+    }
+}
+
+/* FLAGS */ 
+
+.flag {
+    width: 23px;
+    height: 16px;
+    display: block;  
+}
+.sp-flag {
+    background: url('./assets/img/sp-flag.png');
+}
+
+.gb-flag {
+    background: url('./assets/img/gb-flag.png');
+}

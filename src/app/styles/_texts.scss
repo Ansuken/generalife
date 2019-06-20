@@ -1,0 +1,75 @@
+    /* TEXTS */
+    
+    h1 {
+        font-weight: 300;
+        font-size: 50px;
+        margin: 0;
+    }
+    
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        &.section-title {
+            text-align: left;
+            border-bottom: 1px solid $secondary-color;
+            padding-bottom: 10px;
+            color: $secondary-color;
+        }
+    }
+    
+    h3 {
+        &.page-title-text {
+            font-weight: 300;
+            color: $main-color;
+        }
+    }
+
+    h4 {
+        font-weight: 100;
+    }
+    
+    a {
+        color: $main-color;
+        &:hover {
+            text-decoration: none;
+        }
+        &.white-link {
+            color: #FFF;
+        }
+    }
+    
+    .text-primary-datio {
+        color: $main-color;
+    }
+    
+    .text-secondary-datio {
+        color: $secondary-color;
+    }
+
+    .text-tertiary-datio {
+        color: $tertiary-color;
+    }
+    
+    .text-success-datio {
+        color: $datio-success;
+    }
+    
+    .text-warning-datio {
+        color: $datio-warning;
+    }
+    
+    .text-danger-datio {
+        color: $datio-danger;
+    }
+    
+    .link {
+        color: $secondary-color;
+    }
+    
+    .highlight {
+        color: $secondary-color;
+    }
+
+    .highlightText {
+        background: #ff5423;
+    }

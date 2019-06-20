@@ -1,0 +1,13 @@
+[ {
+  "id" : 1051,
+  "name" : "CPPR",
+  "description" : "Core Product Platform Resources",
+  "incative" : false,
+  "deleted" : false
+}, {
+  "id" : 1751,
+  "name" : "Academy",
+  "description" : "Árbol de navidad, etc",
+  "incative" : false,
+  "deleted" : false
+} ]

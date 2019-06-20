@@ -1,0 +1,35 @@
+@import "../../../styles/variables";
+.main-info {
+    &.deleted {
+        img {
+            filter: grayscale(100%);
+        }
+    }
+    margin: 30px 0px;
+    background: #fff;
+    padding: 30px;
+
+    .info-item {
+
+        padding-bottom: 10px;
+
+        .info-title {
+            width: 100px;
+            display: inline-block;
+        }
+    }
+}
+.project-item {
+
+    &:hover {
+        background: #fafafa;
+        .remove-icon {
+            display: block;
+        }
+    }
+
+    .remove-icon {
+        display: none;
+    }
+    
+}

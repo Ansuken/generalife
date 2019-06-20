@@ -1,0 +1,19 @@
+{
+  "id" : 1501,
+  "name" : "Agile",
+  "description" : "Equipos encargado de la metodología de trabajo",
+  "incative" : false,
+  "deleted" : false,
+  "teamCategory" : {
+    "id" : 1452,
+    "name" : "Plataforma",
+    "description" : "equipos de plataforma"
+  },
+  "imputationProject" : {
+    "id" : 1352,
+    "name" : "Daas",
+    "billable" : true,
+    "specialProject" : false,
+    "inactive" : false
+  }
+}

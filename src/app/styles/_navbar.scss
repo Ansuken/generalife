@@ -1,0 +1,136 @@
+/*NAVIGATOR*/
+
+.navbar {
+    border: 0;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-default {
+    background-color: $secondary-color;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: $main-color;
+    background-color: #FFF;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #FFF;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    color: $secondary-color;
+    background-color: #FFF;
+}
+
+ul.nav>li {
+    display: inline-block;
+}
+
+ul.nav>li>a {
+    color: #666;
+}
+
+.nav-tabs>li>a.active,
+.nav-tabs>li>a.active:hover,
+ul.nav>li>a.active,
+ul.nav>li>a:hover,
+.nav-tabs-justified>a.active,
+.nav-tabs.nav-justified>a.active,
+.nav-tabs-justified>a.active:hover,
+.nav-tabs.nav-justified>a.active:hover {
+    background-color: transparent;
+    color: $secondary-color;
+}
+
+// sidebar
+ul.nav>li.sidebar-item {
+    display: block;
+    width: 100%;
+    color: #AAA;
+    border-bottom: 0;
+}
+
+ul.nav>li.sidebar-item>a {
+    color: #AAA;
+    display: block;
+    padding: 5px 15px;
+    margin: 2px 0px;
+    border-radius: 3px;
+    border-bottom: 1px solid transparent;
+    transition: all 200ms;
+}
+
+ul.nav-sidebar>li>a:hover {
+    background-color: #555;
+}
+
+ul.nav-sidebar>li>a.active {
+    color: $main-color;
+}
+
+// sidebar submenu
+ul.nav-sidebar-submenu {
+    li.sidebar-subitems {
+        display: block;
+        width: 100%;
+        color: #AAA;
+        border-bottom: 0;
+        a {
+            display: block;
+            padding: 10px 45px;
+            margin: 2px 0px;
+            border-radius: 3px;
+            transition: all 200ms;
+            color: #AAA;
+            &:hover,
+            &.active {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+// NAVBAR
+ul.nav {
+
+    li {
+
+		a.nav-link {
+
+			color: $main-font-color;
+			border-bottom: 3px solid transparent;
+
+			&:hover, &.active {
+
+				border-color: transparent;
+				background-color: transparent;
+				color: $main-color;
+				border-bottom: 3px solid $tertiary-color;
+			}
+		}
+    }
+    
+	&.internal-nav {
+
+		background: #FFF;
+		border: 1px solid $border-color;
+	}
+}

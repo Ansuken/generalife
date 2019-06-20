@@ -1,0 +1,31 @@
+.no-auth-page {
+    background: #333;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    .no-auth {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #FFF;
+        line-height: 26px;
+        font-size: 14px;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        .no-auth-logo {
+            padding-bottom: 100px;
+        }
+        .no-auth-content {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 100;
+        }
+    }
+    h1 {
+        font-weight: 100;
+        font-size: 72px;
+    }
+}

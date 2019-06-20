@@ -1,0 +1,13 @@
+[ {
+  "id" : 1451,
+  "name" : "Proyecto",
+  "description" : "equipos de proyecto"
+}, {
+  "id" : 1452,
+  "name" : "Plataforma",
+  "description" : "equipos de plataforma"
+}, {
+  "id" : 1453,
+  "name" : "Core",
+  "description" : "Equipos core"
+} ]

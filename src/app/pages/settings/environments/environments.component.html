@@ -1,0 +1,71 @@
+<div class="card-box">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h4>{{'SETTINGS.CREATE_NEW_ENVIRONMENT'|translate}}</h4>
+            <hr>
+            <form (ngSubmit)="createEnvironment(form)" #form="ngForm">
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                        <label>{{'SETTINGS.ENVIRONMENT_NAME'|translate}}: </label>
+                        <input class="form-control" type="text" [(ngModel)]="environment['environmentName']" name="environment.name" required>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-8 col-lg-4">
+                        <label>{{'SETTINGS.SHEET_NAME'|translate}}:</label>
+                        <input class="form-control" type="text" [(ngModel)]="environment['sheetName']" name="environment.sheetName" required>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-8 col-lg-4">
+                        <label>{{'SETTINGS.COUNTRY'|translate}}:</label>
+                        <select class="form-control datio-select" name="environment['idCountry']" [(ngModel)]="environment['idCountry']" required>
+                            <option value="" selected>-</option>
+                            <option [ngValue]="country['idCountry']" *ngFor="let country of countries | orderby:['+name']">{{country['name']}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                        <label>{{'SETTINGS.ENVIRONMENT_DESCRIPTION'|translate}}:</label>
+                        <textarea class="form-control" [(ngModel)]="environment['environmentDescription']" name="environment.description" required></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                        <button type="submit" class="btn btn-datio" [ngClass]="{'pointer': form.valid}" [disabled]="!form.valid">{{'MISC.SAVE'|translate}}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="card-box" *ngIf="environments">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h4>{{'MISC.ENVIRONMENTS'|translate}}</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>{{'SETTINGS.ENVIRONMENT_NAME'|translate}}</td>
+                        <td>{{'SETTINGS.ENVIRONMENT_DESCRIPTION'|translate}}</td>
+                        <td>{{'SETTINGS.SHEET_NAME'|translate}}</td>
+                        <td>{{'SETTINGS.COUNTRY'|translate}}</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="item" *ngFor="let environment of environments">
+                        <td>{{environment['environmentName']}}</td>
+                        <td>{{environment['environmentDescription']}}</td>
+                        <td>{{environment['sheetName']}}</td>
+                        <td>{{getCountryName(environment['idCountry'])}}</td>
+                        <td align="right">
+                            <div class="actions">
+                                <button class="btn btn-datio-danger btn-small" (click)="removeEnvironment(environment['idEnvironment'])">{{'MISC.REMOVE'|translate}}</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="environments.length == 0">
+                        <td class="table-no-results text-center" colspan="5">
+                            {{'ENVIRONMENTS.NO_ENVIRONMENTS'|translate}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

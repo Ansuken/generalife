@@ -1,0 +1,63 @@
+<div class="page-container">
+    <div class="page-title">
+        <h1>{{'MENU.USERS'|translate}}</h1>
+        <a class="btn btn-top-title btn-success" href="#" [routerLink]="['/users/new']">{{'USERS.ADD_USER'|translate}}</a>
+    </div>
+    <div class="">
+        <!-- Page content -->
+        <div class="search-box">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <p>{{'MISC.NAME'|translate}}</p>
+                    <input type="text" class="form-control" placeholder="{{'MISC.SEARCH_BY_NAME'|translate}}" name="text" [(ngModel)]="searchUser.text" (keyup)="searchUsers()"/>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3" *ngIf="environments">
+                    <p>{{'MISC.ENVIRONMENT'|translate}}</p>
+                    <select class="form-control datio-select" name="deleted" [(ngModel)]="searchUser.environment" (change)="searchUsers()">
+                        <option value="" selected>-</option>
+                        <option *ngFor="let environment of environments | orderby:['+environmentName']" [value]="environment['idEnvironment']">
+                            {{environment['environmentName']}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <p>{{'MISC.PROJECT'|translate}}</p>
+                    <select class="form-control datio-select" name="searchUser.project" [(ngModel)]="searchUser.project" (change)="searchUsers()">
+                        <option value="" selected>-</option>
+                        <option *ngFor="let project of projects | orderby:['+name']" [value]="project['idProject']">
+                            {{project['name']}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3" *ngIf="companies">
+                    <p>{{'MISC.COMPANY'|translate}}</p>
+                    <select class="form-control datio-select" name="searchUser.company" [(ngModel)]="searchUser.company" (change)="searchUsers()">
+                        <option value="" selected>-</option>
+                        <option *ngFor="let company of companies | orderby:['+name']" [value]="company['id']">
+                            {{company['name']}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="users-box" *ngIf="users">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let user of users | searchfilter:['firstName', 'lastName']:searchUser.text">
+                    <div class="user-item pointer" (click)="goToUser(user)">
+                        <div class="row">
+                            <div class="col-md-3"><div class="user-photo" [ngStyle]="getInlineStyles(user)"></div></div>
+                            <div class="col-md-9">
+                                <div class="user-info">
+                                    {{user['firstName']}} {{user['lastName']}}
+                                    <div class="email text-primary-datio"><small>{{user['email']}}</small></div>
+                                    <div class="company text-tertiary-datio">{{user['company']['name']}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

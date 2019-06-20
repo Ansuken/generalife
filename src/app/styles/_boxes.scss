@@ -1,0 +1,29 @@
+/* Own Styles*/
+
+
+/* Hosts and Services Status */
+
+.box-container {
+    padding: 5px 0px 5px 10px;
+    background: #FFF;
+    border: 1px solid $border-color;
+    margin-bottom: 15px;
+    &.item-on {
+        border-left: 3px solid #4CAF50;
+        &.pointer:hover {
+            border-top: 1px solid #4CAF50;
+            border-right: 1px solid #4CAF50;
+            border-bottom: 1px solid #4CAF50;
+        }
+    }
+    &.item-off {
+        background: #d9534f;
+        color: #FFF;
+        &.pointer:hover {
+            background: #d23e3a;
+        }
+    }
+    h3 {
+        margin: 0;
+    }
+}

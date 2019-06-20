@@ -1,0 +1,70 @@
+@import "../../../styles/variables";
+.toolbar {
+    position: relative;
+    min-height: 76px;
+    padding: 0px 15px;
+    //background: $secondary-color;
+    background: $main-color;
+    background: #fff;
+    border-bottom: 1px solid $border-color;
+    //background-image: linear-gradient(to bottom right, rgba(167, 14, 166, 0.33), rgba(7, 15, 97, 0.5)), url('https://www.transparenttextures.com/patterns/noisy-net.png');
+
+    .toolbar-content {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        position: relative;
+        font-size: 16px;
+    }
+    .toolbar-text {
+        color: #666;
+        padding: 15px 15px;
+        line-height: 20px;
+        height: 50px;
+        display: inline-block;
+    }
+
+    .toolbar-title {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        h1 {
+            margin: 0;
+        }
+        min-height: 76px;
+    }
+    
+    .toolbar-text {
+        min-height: 76px;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+
+        .header-button-item {
+            margin-right: 40px;
+        }
+    }
+
+    .account-wrap {
+        .account-item {
+            .image {
+                border-radius: 100%;
+                width: 45px;
+                height: 45px;
+                float: left;
+                overflow: hidden;
+                float: left;
+                img {
+                    width: 100%;
+                }
+            }
+            .content {
+                margin-left: 45px;
+                padding: 9px 0;
+                padding-left: 12px;
+            }
+        }
+    }
+}
