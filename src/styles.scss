@@ -1,0 +1,53 @@
+@import "app/styles/variables";
+@import "app/styles/app-structure";
+@import "app/styles/navbar";
+@import "app/styles/elements";
+@import "app/styles/texts";
+@import "app/styles/backgrounds";
+@import "app/styles/components";
+@import "app/styles/buttons";
+@import "app/styles/animations";
+@import "app/styles/boxes";
+@import "app/styles/content-generic-items";
+@import "app/styles/search-box";
+@import "app/styles/users-box";
+@import "app/styles/projects-box";
+@import "../node_modules/ngx-smart-modal/ngx-smart-modal";
+html,
+body {
+    height: 100%;
+    color: $main-font-color;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    background: $website-background-color;
+    color: $main-font-color;
+    background-color: #ffffff;
+    background-image: url("./assets/img/paper-fibers.png");
+}
+
+.page-white {
+    background: #ffffff;
+    border: 1px solid $border-color;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    .page-white-header {
+        border-bottom: 1px solid $border-color;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        // Original Mode
+        max-width: 1345px;
+        padding: 0;
+        // Laptop Mode
+        //max-width: 1345px;
+    }
+}

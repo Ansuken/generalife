@@ -1,0 +1,59 @@
+<div class="page-container">
+    <div class="page-title">
+        <h1>{{'MENU.TEAMS'|translate}}</h1>
+        <a class="btn btn-top-title btn-success" href="#" [routerLink]="['/teams/new']">{{'TEAMS.ADD_TEAM'|translate}}</a>
+    </div>
+    <div class="">
+        <!-- Page content -->
+        <div class="search-box">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <p>{{'MISC.NAME'|translate}}</p>
+                    <input type="text" class="form-control" placeholder="{{'MISC.SEARCH_BY_NAME'|translate}}" name="text" [(ngModel)]="searchTeams.text"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-box col-md-12" *ngIf="teams">
+            <div class="datio-table col-md-12 text-left">
+                <div class="table-header row">
+                    <div class="table-th col-md-2">{{'TEAMS.TEAM_NAME'|translate}}</div>
+                    <div class="table-th col-md-8">{{'TEAMS.TEAM_DESCRIPTION'|translate}}</div>
+                    <div class="table-th col-md-2"></div>
+                </div>
+                <div class="table-content">
+                    <ng-container *ngFor="let team of teams | searchfilter:['name']:searchTeams.text | orderby:['+name']">
+                        <div class="row project-item pointer" *ngIf="!team['remove']" [routerLink]="['/teams', team['id']]">
+                            <div class="table-td col-md-2">
+                                {{team['name']}}
+                            </div>
+                            <div class="table-td col-md-8">
+                                {{team['description']}}
+                            </div>
+                            <div class="table-td col-md-2 text-right">
+                                <span class="text-danger-datio pointer remove-icon" (click)="team['remove']=true"><i class="fas fa-times"></i> {{'MISC.REMOVE'|translate}}</span>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="team['remove']">
+                            <div class="table-td col-md-10 text-right">
+                                {{'MISC.SURE_TO_REMOVE'|translate}} 
+                            </div>
+                            <div class="table-td col-md-1 text-right">
+                                <span class="text-danger pointer" (click)="removeTeam(team['id'])">{{'MISC.YES'|translate}} </span>
+                            </div>
+                            <div class="table-td col-md-1 text-right">
+                                <span class="pointer" (click)="team['remove']=false">{{'MISC.NO'|translate}} </span>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="row project-item" *ngIf="(teams | orderby:['+name']).length===0">
+                        <div class="table-td col-md-12 no-results">
+                            {{'TEAMS.NO_TEAMS_TO_SHOW'|translate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

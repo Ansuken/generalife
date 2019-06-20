@@ -1,0 +1,217 @@
+[ {
+  "id" : 1351,
+  "name" : "spider",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1352,
+  "name" : "Daas",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1353,
+  "name" : "Horas extra",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 1354,
+  "name" : "Bolsa de horas",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 1355,
+  "name" : "Fujur",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1356,
+  "name" : "Customer Behaviour",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1358,
+  "name" : "Rating Externos",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1360,
+  "name" : "It Metrics",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1362,
+  "name" : "Digital Workplace",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1363,
+  "name" : "Arquitectura España",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1364,
+  "name" : "Simplificación Legacy Modelo de datos (Arquitectura España)",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1365,
+  "name" : "Asset Allocation",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1366,
+  "name" : "Boss",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1368,
+  "name" : "Risk Scenarios Data",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1369,
+  "name" : "Large Exposures (Finances)",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1371,
+  "name" : "Rorc (Finances)",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 1372,
+  "name" : "Monitoring",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 2001,
+  "name" : "Transcendence Formación",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 2002,
+  "name" : "Enfermedad CON baja médica",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2003,
+  "name" : "Enfermedad SIN baja médica",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2004,
+  "name" : "Permiso por Boda",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2005,
+  "name" : "Deber inexcusable público y personal",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2006,
+  "name" : "Entrevistas",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2007,
+  "name" : "Formación",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2008,
+  "name" : "Baja por maternidad / paternidad",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2009,
+  "name" : "Mudanza",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2010,
+  "name" : "Atención A Parientes Hasta 2º Grado",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2011,
+  "name" : "Reconocimiento Médico",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2012,
+  "name" : "Formación Interna",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2013,
+  "name" : "Banquillo",
+  "billable" : true,
+  "specialProject" : true,
+  "inactive" : false
+}, {
+  "id" : 2014,
+  "name" : "DWP GlobalDesktop",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 2015,
+  "name" : "DAAS MEXICO",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 3501,
+  "name" : "Datahub",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 3502,
+  "name" : "Alcon",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 3503,
+  "name" : "Intervenciones",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+}, {
+  "id" : 3504,
+  "name" : "Finance Dataquality",
+  "billable" : true,
+  "specialProject" : false,
+  "inactive" : false
+} ]

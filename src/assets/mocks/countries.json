@@ -1,0 +1,34 @@
+[
+  {
+  "idCountry": 1,
+  "name": "España"
+  },
+  {
+  "idCountry": 2,
+  "name": "Global"
+  },
+  {
+  "idCountry": 3,
+  "name": "Mexico"
+  },
+  {
+  "idCountry": 4,
+  "name": "Argentina"
+  },
+  {
+  "idCountry": 5,
+  "name": "Peru"
+  },
+  {
+  "idCountry": 6,
+  "name": "EEUU"
+  }, 
+  {
+  "idCountry": 7,
+  "name": "Venezuela"
+  },
+  {
+  "idCountry": 8,
+  "name": "Colombia"
+  }
+]

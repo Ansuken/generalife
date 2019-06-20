@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+.groups-box {
+    background: #FFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid $border-color;
+}
+.group-item {
+
+    &:hover {
+        background: #fafafa;
+        .remove-icon {
+            display: block;
+        }
+    }
+
+    .remove-icon {
+        display: none;
+    }
+    
+}

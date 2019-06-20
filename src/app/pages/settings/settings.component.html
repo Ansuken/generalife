@@ -1,0 +1,20 @@
+<div class="page-container">
+    <div class="page-title">
+        <h1>{{'MENU.SETTINGS'|translate}}</h1>
+    </div>
+    <div class="page-content">
+        <ul class="nav internal-nav">
+            <li class="nav-item">
+                <a class="nav-link pointer" [routerLink]="['environments']" routerLinkActive="active">{{'MISC.ENVIRONMENTS'|translate}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pointer" [routerLink]="['countries']" routerLinkActive="active">{{'MISC.COUNTRIES'|translate}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pointer" [routerLink]="['companies']" routerLinkActive="active">{{'MISC.COMPANIES'|translate}}</a>
+            </li>
+        </ul>
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>

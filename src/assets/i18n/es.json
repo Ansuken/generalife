@@ -1,0 +1,128 @@
+{
+    "MENU": {
+        "USERS": "Usuarios",
+        "PROJECTS": "Proyectos",
+        "GROUPS": "Grupos",
+        "TEAMS": "Equipos",
+        "SETTINGS": "Configuración"
+    },
+    "COMPANIES": {
+        "NO_COMPANIES": "No existen empresas"
+    },
+    "COUNTRIES": {
+        "NO_COUNTRIES": "No existen países"
+    },
+    "ENVIRONMENTS": {
+        "NO_ENVIRONMENTS": "No existen entornos"
+    },
+    "MISC": {
+        "ADD_TO_A_GROUP": "Añadir a un grupo",
+        "CANCEL": "Cancelar",
+        "COMPANY": "Compañía",
+        "COMPANIES": "Compañías",
+        "COUNTRIES": "Países",
+        "COUNTRY": "País",
+        "DELETED": "Eliminado",
+        "DISCONNECT": "Desconectar",
+        "DO_IT": "Hazlo!",
+        "EMAIL": "Email",
+        "END_DATE": "Fecha fin",
+        "ENVIRONMENT": "Entorno",
+        "ENVIRONMENTS": "Entornos",
+        "GO_BACK": "Atrás",
+        "GROUP_DESCRIPTION": "Descripción del grupo",
+        "GROUP_NAME": "Nombre del grupo",
+        "GROUPS": "Grupos",
+        "MY_PROFILE": "Mi perfil",
+        "NAME": "Nombre",
+        "NO": "No",
+        "NO_ELEMENTS": "No hay elementos",
+        "NOPE": "Nope",
+        "PROJECT": "Proyecto",
+        "PROJECTS": "Proyectos",
+        "REMOVE": "Eliminar",
+        "RESET": "Reiniciar formulario",
+        "SAVE": "Guardar",
+        "SEARCH": "Buscar",
+        "SEARCH_BY_NAME": "Buscar por nombre...",
+        "SELECT": "- Seleccine -",
+        "START_DATE": "Fecha inicio",
+        "SURE_TO_REMOVE": "Estás seguro de eliminar?",
+        "TEAMS": "Equipos",
+        "USER_NAME": "Nombre de usuario",
+        "WARNING": "Cuidado!",
+        "YES": "Si"
+    },
+    "USERS": {
+        "ADD_USER": "Añadir usuario",
+        "ADD_USERS": "Añadir usuarios",
+        "BANK_ID": "Bank ID",
+        "BBVA_EMAIL": "BBVA Email",
+        "CHANGE_PIC": "Cambiar foto",
+        "HDFS": "HDFS",
+        "NO_USERS_TO_SHOW": "No existen usuarios que mostrar",
+        "PUBLIC_KEY": "Clave pública",
+        "REMOVE_USER": "Eliminar usuario",
+        "SSH": "SSH",
+        "TOKEN": "Token",
+        "UID": "UID",
+        "VPN": "VPN",
+        "WARNING_REMOVE_TEXT": "¿Estás muy seguro de que quieres eliminar a este usuario?"
+    },
+    "GROUPS": {
+        "ADD_GROUP": "Añadir grupo",
+        "REMOVE_GROUP": "Eliminar grupo",
+        "WARNING_REMOVE_TEXT": "¿Estás muy seguro de que quieres eliminar a este grupo?"
+    },
+    "PROJECTS": {
+        "ADD_PROJECT": "Añadir proyecto",
+        "ADD_SUBPROJECT": "Añadir subproyecto",
+        "BITBUCKET_URL": "Bitbucket Url",
+        "CONFLUENCE": "Confluence",
+        "COUNTRY": "País",
+        "DRIVE_URL": "Drive Url",
+        "JENKINS_URL": "Jenkins Url",
+        "JIRA": "Jira",
+        "MAIN_UUAA": "UUAA principal",
+        "NO_PROJECTS_TO_SHOW": "No existen proyectos que mostrar",
+        "PARENT_PROJECT": "Proyecto padre",
+        "PRODUCT_OWNER": "Product owner",
+        "PROJECT_DESCRIPTION": "Descripción del proyecto",
+        "PROJECT_NAME": "Nombre de proyecto",
+        "RAW_UUAA": "Raw UUAA",
+        "REMOVE_PROJECT": "Eliminar proyecto",
+        "SANDBOX_OWNER": "Sandbox owner",
+        "SUBPROJECTS": "Subproyectos",
+        "UUAA": "UUAA",
+        "WARNING_REMOVE_TEXT": "¿Estás muy seguro de que quieres eliminar a este proyecto?"
+    },
+    "SETTINGS": {
+        "COMPANY_NAME": "Nombre de la empresa",
+        "COUNTRY": "País",
+        "COUNTRY_NAME": "Nombre del país",
+        "CREATE_NEW_COMPANY": "Crear una nueva empresa",
+        "CREATE_NEW_COUTNRY": "Crear un nueov país",
+        "CREATE_NEW_ENVIRONMENT": "Crear un nuevo entorno",
+        "ENVIRONMENT_DESCRIPTION": "Descripción del entorno",
+        "ENVIRONMENT_NAME": "Nombre del entorno",
+        "SHEET_NAME": "Nombre de la hoja"
+    },
+    "TEAMS": {
+        "ADD_TEAM": "Añadir equipo",
+        "NO_TEAMS_TO_SHOW": "No existen equipos que mostrar",
+        "REMOVE_TEAM": "Eliminar equipo",
+        "TEAM_NAME": "Nombre del equipo",
+        "TEAM_DESCRIPTION": "Descripción del equipo",
+        "WARNING_REMOVE_TEXT": "¿Estás muy seguro de que quieres eliminar a este equipo?"
+    },
+    "LOGIN": {
+        "LOGIN": "Entrar",
+        "PLEASE_LOGIN": "Por favor, ingrese..."
+    },
+    "NO_AUTH": {
+        "TEXT": "No estás autorizado para acceder a esta aplicación"
+    },
+    "NOT_ALLOWED": {
+        "TEXT": "No tienes permiso para acceder a este área"
+    }
+}

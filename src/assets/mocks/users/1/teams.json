@@ -1,0 +1,117 @@
+[ {
+    "id" : 1,
+    "startDate" : "2017-08-15",
+    "endDate" : null,
+    "rol" : "DEV",
+    "user" : {
+      "id" : 1,
+      "uid" : "rveral",
+      "firstName" : "Roberto",
+      "lastName" : "Veral del Pozo",
+      "email" : "rveral@datio.com",
+      "phoneNumber" : "999999999",
+      "gender" : "MALE",
+      "address" : "Talamanca de Jarama",
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "00000000A",
+      "hireDate" : "2016-07-04",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1994-03-26",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : "XE65648",
+      "githubUser" : "roberveral-datio",
+      "origin" : "Tinamica",
+      "confidentialitySigned" : true,
+      "technologies" : "Java,Scala.Docker",
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : null,
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1051,
+      "name" : "CPPR",
+      "description" : "Core Product Platform Resources",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1,
+        "name" : "Core",
+        "description" : "Platform-related teams"
+      },
+      "imputationProject" : {
+        "id" : 1001,
+        "name" : "DAT-PLATFORM",
+        "billable" : false,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  }, {
+    "id" : 1351,
+    "startDate" : "2018-06-01",
+    "endDate" : "2018-06-27",
+    "rol" : "DEV",
+    "user" : {
+      "id" : 1,
+      "uid" : "rveral",
+      "firstName" : "Roberto",
+      "lastName" : "Veral del Pozo",
+      "email" : "rveral@datio.com",
+      "phoneNumber" : "999999999",
+      "gender" : "MALE",
+      "address" : "Talamanca de Jarama",
+      "profile" : "PEOPLE",
+      "inactive" : false,
+      "deleted" : false,
+      "nif" : "00000000A",
+      "hireDate" : "2016-07-04",
+      "leavingDate" : null,
+      "leavingReason" : null,
+      "birthdate" : "1994-03-26",
+      "workingDay" : "COMPACT",
+      "bbvaCode" : "XE65648",
+      "githubUser" : "roberveral-datio",
+      "origin" : "Tinamica",
+      "confidentialitySigned" : true,
+      "technologies" : "Java,Scala.Docker",
+      "company" : {
+        "id" : 1,
+        "name" : "Datio"
+      },
+      "billableProfile" : null,
+      "country" : {
+        "id" : 1,
+        "name" : "España",
+        "isoCode" : "ESP"
+      }
+    },
+    "team" : {
+      "id" : 1051,
+      "name" : "CPPR",
+      "description" : "Core Product Platform Resources",
+      "incative" : false,
+      "deleted" : false,
+      "teamCategory" : {
+        "id" : 1,
+        "name" : "Core",
+        "description" : "Platform-related teams"
+      },
+      "imputationProject" : {
+        "id" : 1001,
+        "name" : "DAT-PLATFORM",
+        "billable" : false,
+        "specialProject" : false,
+        "inactive" : false
+      }
+    }
+  } ]

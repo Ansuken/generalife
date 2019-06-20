@@ -1,0 +1,21 @@
+<div class="login-screen">
+    <div class="row">
+        <div class="col-md-8 login-left">
+            <h1 class="logo">Genera<span class="text-tertiary-datio">LIFE</span></h1>
+        </div>
+        <div class="col-md-4 login-right">
+            <h3 class="text-primary-datio">{{'LOGIN.PLEASE_LOGIN'|translate}}</h3>
+            <form (ngSubmit)="login()" #form="ngForm" novalidate="" class="was-validated">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="username" name="username" [(ngModel)]="username" required/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]="password" required/>
+                </div>
+                <div class="form-group">
+                    <button [disabled]="!form.valid" [ngClass]="{'pointer': form.valid}" type="submit" class="btn btn-datio btn-block btn-small">{{'LOGIN.LOGIN'|translate}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

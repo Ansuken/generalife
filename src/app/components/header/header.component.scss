@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0px;
+    background: #FFF;
+    border-bottom: 1px solid $border-color;
+    box-shadow: 0px -20px 47px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -20px 47px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -20px 47px 1px rgba(0,0,0,0.75);
+}

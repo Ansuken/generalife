@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+.stats-item {
+    padding: 20px 30px;
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    @include soft-shadow;
+    color: #fff;
+    h2 {
+        font-size: 36px;
+        font-weight: 300;
+        margin: 0;
+    }
+    .desc {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .icon {
+        display: inline-block;
+        position: absolute;
+        bottom: -50px;
+        right: -7px;
+
+        i {
+            font-size: 180px;
+            opacity: .2;
+            line-height: 1;
+            vertical-align: baseline;
+        }
+    }
+}

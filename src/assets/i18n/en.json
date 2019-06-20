@@ -1,0 +1,128 @@
+{
+    "MENU": {
+        "USERS": "Users",
+        "PROJECTS": "Projects",
+        "GROUPS": "Groups",
+        "TEAMS": "Teams",
+        "SETTINGS": "Settings"
+    },
+    "COMPANIES": {
+        "NO_COMPANIES": "There are no companies"
+    },
+    "COUNTRIES": {
+        "NO_COUNTRIES": "There are no countries"
+    },
+    "ENVIRONMENTS": {
+        "NO_ENVIRONMENTS": "There are no environments"
+    },
+    "MISC": {
+        "ADD_TO_A_GROUP": "Add to a group",
+        "CANCEL": "Cancel",
+        "COMPANY": "Company",
+        "COMPANIES": "Companies",
+        "COUNTRY": "Country",
+        "COUNTRIES": "Countries",
+        "DELETED": "Deleted",
+        "DISCONNECT": "Disconnect",
+        "DO_IT": "Do it!",
+        "EMAIL": "Email",
+        "END_DATE": "End date",
+        "ENVIRONMENT": "Environment",
+        "ENVIRONMENTS": "Environments",
+        "GO_BACK": "Go Back",
+        "GROUP_DESCRIPTION": "Group Description",
+        "GROUP_NAME": "Group Name",
+        "GROUPS": "Groups",
+        "MY_PROFILE": "My profile",
+        "NAME": "Name",
+        "NO": "No",
+        "NO_ELEMENTS": "There are no elements",
+        "NOPE": "Nope",
+        "PROJECT": "Project",
+        "PROJECTS": "Projects",
+        "REMOVE": "Remove",
+        "RESET": "Reset form",
+        "SAVE": "Save",
+        "SEARCH": "Search",
+        "SEARCH_BY_NAME": "Search by name...",
+        "SELECT": "- Select -",
+        "START_DATE": "Start date",
+        "SURE_TO_REMOVE": "Are you sure to remove?",
+        "TEAMS": "Teams",
+        "USER_NAME": "User name",
+        "WARNING": "Warning!",
+        "YES": "Yes"
+    },
+    "USERS": {
+        "ADD_USER": "Add user",
+        "ADD_USERS": "Add users",
+        "BANK_ID": "Bank ID",
+        "BBVA_EMAIL": "BBVA Email",
+        "CHANGE_PIC": "Change pic",
+        "HDFS": "HDFS",
+        "NO_USERS_TO_SHOW": "There are no users to show",
+        "PUBLIC_KEY": "Public Key",
+        "REMOVE_USER": "Remove user",
+        "SSH": "SSH",
+        "TOKEN": "Token",
+        "UID": "UID",
+        "VPN": "VPN",
+        "WARNING_REMOVE_TEXT": "Are you pretty sure you want to remove the user?"
+    },
+    "GROUPS": {
+        "ADD_GROUP": "Add group",
+        "REMOVE_GROUP": "Remove group",
+        "WARNING_REMOVE_TEXT": "Are you pretty sure you want to remove the group?"
+    },
+    "PROJECTS": {
+        "ADD_PROJECT": "Add project",
+        "ADD_SUBPROJECT": "Add subproject",
+        "BITBUCKET_URL": "Bitbucket Url",
+        "CONFLUENCE": "Confluence",
+        "COUNTRY": "Country",
+        "DRIVE_URL": "Drive Url",
+        "JENKINS_URL": "Jenkins Url",
+        "JIRA": "Jira",
+        "MAIN_UUAA": "Main UUAA",
+        "NO_PROJECTS_TO_SHOW": "There are no projects to show",
+        "PARENT_PROJECT": "Parent project",
+        "PRODUCT_OWNER": "Product owner",
+        "PROJECT_DESCRIPTION": "Project description",
+        "PROJECT_NAME": "Project name",
+        "RAW_UUAA": "Raw UUAA",
+        "REMOVE_PROJECT": "Remove project",
+        "SANDBOX_OWNER": "Sandbox owner",
+        "SUBPROJECTS": "Subprojects",
+        "UUAA": "UUAA",
+        "WARNING_REMOVE_TEXT": "Are you pretty sure you want to remove the project?"
+    },
+    "TEAMS": {
+        "ADD_TEAM": "Add team",
+        "NO_TEAMS_TO_SHOW": "There are no teams to show",
+        "REMOVE_TEAM": "Remove team",
+        "TEAM_NAME": "Team name",
+        "TEAM_DESCRIPTION": "Team description",
+        "WARNING_REMOVE_TEXT": "Are you pretty sure you want to remove the team?"
+    },
+    "SETTINGS": {
+        "COMPANY_NAME": "Company name",
+        "COUNTRY": "Country",
+        "COUNTRY_NAME": "Country name",
+        "CREATE_NEW_COMPANY": "Create new company",
+        "CREATE_NEW_COUNTRY": "Create new country",
+        "CREATE_NEW_ENVIRONMENT": "Create new environment",
+        "ENVIRONMENT_DESCRIPTION": "Environment description",
+        "ENVIRONMENT_NAME": "Environment name",
+        "SHEET_NAME": "Sheet name"
+    },
+    "LOGIN": {
+        "LOGIN": "Login",
+        "PLEASE_LOGIN": "Please login..."
+    },
+    "NO_AUTH": {
+        "TEXT": "You are not authorized to access this application."
+    },
+    "NOT_ALLOWED": {
+        "TEXT": "You are not allowed to access this area"
+    }
+}

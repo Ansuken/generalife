@@ -1,0 +1,30 @@
+[
+    {
+    "idEnvironment": 1,
+    "idCountry": 1,
+    "sheetName": "Work España",
+    "environmentName": "Work Spain",
+    "environmentDescription": "Work Spain description"
+    },
+    {
+    "idEnvironment": 2,
+    "idCountry": 2,
+    "sheetName": "WORK Global",
+    "environmentName": "Work Global",
+    "environmentDescription": "Work Global description"
+    },
+    {
+    "idEnvironment": 3,
+    "idCountry": 1,
+    "sheetName": "LIVE España",
+    "environmentName": "Live Spain",
+    "environmentDescription": "Live Spain description"
+    },
+    {
+    "idEnvironment": 4,
+    "idCountry": 2,
+    "sheetName": "LIVE Global",
+    "environmentName": "Live Global",
+    "environmentDescription": "Live Global description"
+    }
+]

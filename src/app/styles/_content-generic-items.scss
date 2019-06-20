@@ -1,0 +1,33 @@
+/* Own Styles*/
+
+
+/*Content Generic Items*/
+
+.page-title {
+	position: relative;
+    h1 {
+        font-weight: 300;
+        margin-bottom: 30px;
+        font-size: 50px;
+    }
+}
+
+.page-content {
+}
+
+.no-results {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+.pagination-box {
+    padding: 15px 0px;
+}
+
+.no-selection { 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -ms-user-select: none; 
+}
